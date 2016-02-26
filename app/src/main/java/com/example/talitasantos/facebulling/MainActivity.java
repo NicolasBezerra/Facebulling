@@ -18,11 +18,14 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final CheckBox statusloguin;
         final Button buttonLogin = (Button) findViewById(R.id.button);
+        final Button buttonSingUp = (Button) findViewById(R.id.button2);
+        final Button singingUp = (Button) findViewById(R.id.button4);
         final EditText textLoguin = (EditText) findViewById(R.id.editText);
         final EditText fieldPass = (EditText)findViewById(R.id.editText2);
-        statusloguin = (CheckBox)findViewById(R.id.checkBox);
+        final EditText confirmPass = (EditText)findViewById(R.id.editText4);
+        final EditText registro = (EditText) findViewById(R.id.registro);
+
 
         buttonLogin.setOnClickListener(new Button.OnClickListener()
         {
@@ -31,12 +34,56 @@ public class MainActivity extends AppCompatActivity {
             {
                 String login = textLoguin.getText().toString();
                 String pass = fieldPass.getText().toString();
+                String LoginCorrect = "a";
+                String PassCorrect = "a";
 
-                if(login.equals("a") && pass.equals("d")) statusloguin.setChecked(true);
-                else Toast.makeText(v.getContext(), "Incorrect Data", Toast.LENGTH_SHORT).show();
+                if(login.equals(LoginCorrect) && pass.equals(PassCorrect)){
+
+                    registro.setText("Sucessfull login!");
+                    registro.setVisibility(View.VISIBLE);
+                }
+                else {
+                    registro.setText("fail to login");
+                    registro.setVisibility(View.VISIBLE);
+                }
             }
         });
 
+        buttonSingUp.setOnClickListener(new Button.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                confirmPass.setVisibility(View.VISIBLE);
+                buttonLogin.setVisibility(View.INVISIBLE);
+                singingUp.setVisibility(View.VISIBLE);
+                buttonSingUp.setVisibility(View.INVISIBLE);
+                singingUp.isEnabled();
+
+
+            }
+        });
+
+        buttonSingUp.setOnClickListener(new Button.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                String pass = fieldPass.getText().toString();
+                String confirmPass = "";
+
+                if(pass.equals(confirmPass))                {
+                    registro.setText("Sucessfull Sing up!");
+                    registro.setVisibility(View.VISIBLE);
+                }
+                else{
+                    registro.setText("fail to sing up");
+                    registro.setVisibility(View.VISIBLE);
+                }
+
+
+            }
+        });
 
 
     }

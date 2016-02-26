@@ -60,27 +60,28 @@
         android:text="Login"
         android:id="@+id/button"
         android:background="#6e6f71"
-        android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#dcdfe2"
+        android:layout_marginTop="31dp"
+        android:backgroundTint="#828282"
         android:enabled="true"
         android:textColor="#efe7e7"
         android:textStyle="bold"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:text="Sign up for facebook"
-        android:backgroundTint="#6682ae"
+        android:backgroundTint="#567bb6"
         android:id="@+id/button2"
         android:background="#3164af"
         android:textColor="#c8c8c8"
         android:textStyle="bold"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/registro"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="40dp"
@@ -102,20 +103,40 @@
         android:text="Batata"
         android:visibility="invisible"
         android:background="#4569b5"
+        android:textColor="#ffffff"
         android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
-        android:textColor="#ffffff" />
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logado "
-        android:id="@+id/checkBox"
-        android:layout_alignParentBottom="true"
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:background="#f1f2f3"
+        android:autoText="false"
+        android:textIsSelectable="false"
+        android:textColor="#000000"
+        android:hint="Confirm Password"
+        android:layout_below="@+id/editText2"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Sign up"
+        android:backgroundTint="#567bb6"
+        android:id="@+id/button4"
+        android:background="#3164af"
+        android:textColor="#c8c8c8"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:allowUndo="false"
-        android:checked="false"
-        android:enabled="false" />
+        android:visibility="invisible"
+        android:enabled="true" />
 
 </RelativeLayout>
