@@ -5,7 +5,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="#4569b5">
+    android:background="#4569b5"
+    android:touchscreenBlocksFocus="false">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -31,7 +32,7 @@
         android:layout_marginTop="-10dp"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/usernameText"
         android:background="#f1f2f3"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
@@ -44,13 +45,13 @@
         android:inputType="textPassword"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/passwordText"
         android:background="#f1f2f3"
         android:autoText="false"
         android:textIsSelectable="false"
         android:textColor="#000000"
         android:hint="Password"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/usernameText"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -58,7 +59,7 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:text="Login"
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:background="#6e6f71"
         android:layout_marginTop="31dp"
         android:backgroundTint="#828282"
@@ -67,15 +68,15 @@
         android:textStyle="bold"
         android:visibility="visible"
         android:layout_below="@+id/imageView2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2" />
+        android:layout_alignLeft="@+id/singUpButton"
+        android:layout_alignStart="@+id/singUpButton" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:text="Sign up for facebook"
         android:backgroundTint="#567bb6"
-        android:id="@+id/button2"
+        android:id="@+id/singUpButton"
         android:background="#3164af"
         android:textColor="#c8c8c8"
         android:textStyle="bold"
@@ -87,14 +88,14 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:text="'?'"
-        android:id="@+id/button3"
+        android:id="@+id/random"
         android:background="#3164af"
         android:textColor="#c8c8c8"
         android:textStyle="bold"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toRightOf="@+id/button2"
+        android:layout_alignBottom="@+id/singUpButton"
+        android:layout_toRightOf="@+id/singUpButton"
         android:layout_marginLeft="20dp"
-        android:layout_toEndOf="@+id/button2" />
+        android:layout_toEndOf="@+id/singUpButton" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -104,7 +105,7 @@
         android:visibility="invisible"
         android:background="#4569b5"
         android:textColor="#ffffff"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/loginButton"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true" />
 
@@ -113,15 +114,15 @@
         android:layout_height="50dp"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText4"
+        android:id="@+id/confirmPasswordButton"
         android:background="#f1f2f3"
         android:autoText="false"
         android:textIsSelectable="false"
         android:textColor="#000000"
         android:hint="Confirm Password"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/passwordText"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignLeft="@+id/passwordText"
         android:layout_marginTop="10dp"
         android:visibility="invisible"/>
 
@@ -129,14 +130,41 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:text="Sign up"
-        android:backgroundTint="#567bb6"
-        android:id="@+id/button4"
-        android:background="#3164af"
+        android:backgroundTint="#6e6f71"
+        android:id="@+id/singingUpButton"
+        android:background="#6e6f71"
         android:textColor="#c8c8c8"
         android:textStyle="bold"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_centerHorizontal="true"
         android:visibility="invisible"
-        android:enabled="true" />
+        android:enabled="true"
+        android:layout_alignTop="@+id/singUpButton"
+        android:layout_toLeftOf="@+id/random"
+        android:layout_toStartOf="@+id/random" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Confirm"
+        android:backgroundTint="#6e6f71"
+        android:id="@+id/confirmSingingUp"
+        android:background="#6e6f71"
+        android:textColor="#c8c8c8"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:enabled="true"
+        android:layout_alignTop="@+id/singUpButton"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/jamv"
+        android:background="@drawable/jamv"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_alignBottom="@+id/loginButton"
+        android:layout_marginBottom="50dp"
+        android:visibility="invisible" />
 
 </RelativeLayout>
